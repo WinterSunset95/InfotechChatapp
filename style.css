@@ -1,3 +1,9 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
 body {
     display: flex;
     justify-content: center;
@@ -11,6 +17,12 @@ main {
     height: 100%;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
+}
+
+#messages {
+	overflow: scroll;
+	display: flex;
+	flex-direction: column-reverse;
 }
 
 #messages > li {
