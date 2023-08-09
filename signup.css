@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+}
+
+.signin {
+    border: 0rem;
+    padding: 0rem;
+    background-color: blue;
+    text-align: center;
+}
