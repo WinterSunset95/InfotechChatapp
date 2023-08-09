@@ -6,6 +6,9 @@ body {
 
 main {
     width: 100%;
+    max-width: 860px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
 }
 
 .signin {

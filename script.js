@@ -11,6 +11,13 @@ const input = document.getElementById("input");
 // Initializing a placeholder for our data
 let data;
 let interval;
+const url = "/chatapp/"
+
+const addToUl = (timestamp, message) => {
+	const li = document.createElement('li')
+	li.innerHTML = `<p>${timestamp}</p><p>${message}</p>`
+	return li;
+}
 
 // When a user first enters the page, we want to get all the data from the database
 // and display it on the page
@@ -20,7 +27,7 @@ const initialize = () => {
 	// It is a way to make a request to a server
 	// In this case, we are making a request to our own database
 	// This database contains a table of user messages
-	fetch(`/api/index.php`)
+	fetch(`${url}/api/index.php`)
 		.then(response => response.json())
 		.then(result => {
 			data = result.reverse();
@@ -30,8 +37,7 @@ const initialize = () => {
 				const item = data[i];
 				const message = item.message_text;
 				const timestamp = item.message_timestamp;
-				const li = document.createElement("li");
-				li.innerHTML = `<p>${timestamp}</p><p>${message}</p>`;
+				const li = addToUl(timestamp, message)
 				display.appendChild(li);
 			}
 		})
@@ -49,7 +55,7 @@ initialize();
 
 // The following function checks if there is any new data in the database
 const getData = () => {
-	fetch(`/api/index.php`)
+	fetch(`${url}/api/index.php`)
 	.then(response => response.json())
 	.then(result => {
 		// If the length of our data variable matches the length of the fetch result,
@@ -63,8 +69,7 @@ const getData = () => {
 			const item = result[result.length-1];
 			const message = item.message_text;
 			const timestamp = item.message_timestamp;
-			const li = document.createElement("li");
-			li.innerHTML = `<p>${timestamp}</p><p>${message}</p>`;
+			const li = addToUl(timestamp, message)
 			// Therefore, we append the last item of the fetch result to the unordered list (<ul></ul>)
 			display.prepend(li);
 			data = result;
@@ -84,7 +89,7 @@ const send = () => {
 	const data = { "message": value };
 	// Sending a POST request to our own database
 	// Along with the message the user typed in
-	fetch(`/api/chat.php`, {
+	fetch(`${url}/api/chat.php`, {
 		method: "POST",
 		body: JSON.stringify(data),
 		headers: {

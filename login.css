@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightseagreen;
+}
+
+main {
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+
+.login {
+    width: 40%;
+    overflow: hidden;
+    margin: auto;
+    padding: 40px;
+    background: aquamarine;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: darkblue;
+    padding: 1rem;
+
+}
+
+label {
+    width: 500px;
+    height: 1.5rem;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+#pass {
+    width: 300px;
+    height: 30px;
+    border: none;     
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+
+#log {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: blue;
+
+}
+
+span {
+    color: white;
+    font-size: 17px;
+
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.green{
+    color: darkmagenta;
+    font-size: x-large;
+}
+
