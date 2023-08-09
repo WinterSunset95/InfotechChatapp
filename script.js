@@ -1,7 +1,7 @@
 const display = document.getElementById("messages");
 const input = document.getElementById("input");
 
-const url = "http://localhost:8080"
+const url = "https://wintersunset95.000webhostapp.com"
 
 let data;
 let interval;
