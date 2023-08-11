@@ -8,12 +8,18 @@ main {
     width: 100%;
     max-width: 860px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: large;
+    font-size: x-large;
+    background-color: aqua;
 }
 
 .signin {
-    border: 0rem;
-    padding: 0rem;
-    background-color: blue;
+    color: blue;
     text-align: center;
+    font-size: 4rem;
+}
+
+.larger {
+    font-size: x-large;
+    text-align: center;
+    background-color: aqua;
 }
