@@ -6,10 +6,10 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
-$dbhost = "localhost:3306";
-$dbname = "infotechchatapp";
-$uname = "root";
-$upass = "";
+$dbhost = "localhost";
+$dbname = "infotechchat";
+$uname = "Autumn";
+$upass = "win";
 
 $conn = new mysqli($dbhost, $uname, $upass, $dbname);
 

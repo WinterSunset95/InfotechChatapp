@@ -11,7 +11,7 @@ const input = document.getElementById("input");
 // Initializing a placeholder for our data
 let data;
 let interval;
-const url = "/chatapp/"
+const url = ""
 
 const addToUl = (timestamp, message) => {
 	const li = document.createElement('li')
