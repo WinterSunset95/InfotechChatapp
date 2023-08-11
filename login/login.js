@@ -1,8 +1,8 @@
 function myFunction () {
     var x = document.getElementById("myInput");
-    if (x.type === "Password") {
-        x.type = "type";
+    if (x.type == 'password') {
+        x.type = 'text';
     } else {
-        x.type = "Password";
+        x.type = 'password'
     }
 }
