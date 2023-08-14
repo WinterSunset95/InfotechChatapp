@@ -10,22 +10,12 @@
 <body>
     <main>
         <div style="padding-left: 2rem;">
-            <h2 class="signin"><u>Sign Up Here</u></h2>
-
-            <button class="larger"><a href="../login/login.html">Alreaady have an Account</a></button><br>
-            <hr color="aqua">
-            <hr color="aqua">
-
-            <label for="first_name"><b>First Name</b></label>
-            <input type="text" name="Fname" id="Fname" placeholder="FirstName">
+            <h3 class="signin">Welcome to Infotech Chatapp</h3>
+           <h6 class="signin">Join Us For Free</h6>
             <br>
+           <span class="larger">Already Have An <a href="../login/login.html"> Account</a></span>
             <hr color="aqua">
-
-            <label for="second_name"><b>Second Name</b></label>
-            <input type="text" name="Sname" id="Sname" placeholder="SecondName">
-            <br>
             <hr color="aqua">
-
              <label for="username"><b>Username</b></label>
              <input type="text" name="uname" id="uname" placeholder="UserName">
              <br>
@@ -49,7 +39,7 @@
              <br>
              <hr color="aqua">
 
-             <input type="button" name="Sign" id="Sign" value="Sign In Here">
+             <input onclick="signup()" type="button" name="Sign" id="Sign" value="Sign In Here">
              <br>
              <br>
              <hr color="aqua">
@@ -60,5 +50,6 @@
 
         </div> 
     </main>
+    <script src="signup.js"></script>
 </body>
 </html>

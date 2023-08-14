@@ -3,19 +3,28 @@
 // Licensed at Infotech, Bridge Street, Rengkai
 // Repository: https://github.com/WinterSunset95/InfotechChatapp
 
+const url = "/chatapp"
 
-// We first get the display and inputs as javascript objects
+// Firstly, we check if the user is logged in
+let user = localStorage.getItem("username");
+let password = localStorage.getItem("password");
+console.log("username", user)
+if (!user) {
+	alert("not logged in")
+	window.location.href = `${url}/login/login.html`
+}
+
+// We then get the display and inputs as javascript objects
 const display = document.getElementById("messages");
 const input = document.getElementById("input");
 
 // Initializing a placeholder for our data
 let data;
 let interval;
-const url = "/chatapp"
 
-const addToUl = (timestamp, message) => {
+const addToUl = (timestamp, message, sender) => {
 	const li = document.createElement('li')
-	li.innerHTML = `<p>${timestamp}</p><p>${message}</p>`
+	li.innerHTML = `<p>${sender} -- ${timestamp}</p><p>${message}</p>`
 	return li;
 }
 
@@ -37,7 +46,8 @@ const initialize = () => {
 				const item = data[i];
 				const message = item.message_text;
 				const timestamp = item.message_timestamp;
-				const li = addToUl(timestamp, message)
+				const sender = item.message_sender;
+				const li = addToUl(timestamp, message, sender)
 				display.appendChild(li);
 			}
 		})
@@ -55,6 +65,8 @@ initialize();
 
 // The following function checks if there is any new data in the database
 const getData = () => {
+	user = localStorage.getItem("username");
+	password = localStorage.getItem("password");
 	fetch(`${url}/api/index.php`)
 	.then(response => response.json())
 	.then(result => {
@@ -69,7 +81,8 @@ const getData = () => {
 			const item = result[result.length-1];
 			const message = item.message_text;
 			const timestamp = item.message_timestamp;
-			const li = addToUl(timestamp, message)
+			const sender = item.message_sender;
+			const li = addToUl(timestamp, message, sender)
 			// Therefore, we append the last item of the fetch result to the unordered list (<ul></ul>)
 			display.prepend(li);
 			data = result;
@@ -86,7 +99,10 @@ interval = setInterval(() => {
 // When the user clicks the send button, we want to send the message to the database
 const send = () => {
 	const value = input.value
-	const data = { "message": value };
+	if (user == null || value == '') {
+		return;
+	}
+	const data = { "user": user, "message": value };
 	// Sending a POST request to our own database
 	// Along with the message the user typed in
 	fetch(`${url}/api/chat.php`, {

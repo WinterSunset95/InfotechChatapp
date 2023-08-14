@@ -13,13 +13,22 @@ main {
 }
 
 .signin {
-    color: blue;
+    color: black;
     text-align: center;
-    font-size: 4rem;
 }
 
 .larger {
     font-size: x-large;
     text-align: center;
     background-color: aqua;
+}
+
+.center {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+h6 {
+    margin: 0%;
 }

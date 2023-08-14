@@ -68,7 +68,16 @@ span {
 }
 
 .green{
-    color: darkmagenta;
-    font-size: x-large;
+    font-size: 2.5rem;
 }
 
+.words {
+    text-decoration-color: black;
+    color: black;
+}
+
+.center {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
