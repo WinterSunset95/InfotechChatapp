@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 830px;
+    text-align: left justify;
+    line-height: 2rem;
+}
+
+
+
+
+
+
+
+
+
+

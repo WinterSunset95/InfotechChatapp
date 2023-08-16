@@ -9,40 +9,31 @@
 </head>
 <body>
     <main>  
-        <h1>Welcome Back, Dear User's</h1>
-        <h4 class="center">Welcome Back! Please enter your detail</h4> <br>
-        <div class="login">
-            <form id="login" method="get" action="login.php">
-             <label>
-                    <b>User Name</b>
-                    <input type="text" name="Uname" id="Uname" placeholder="Username or Gmail or Phone">
-                </label>
-                <br>
-                <br>
-                <label>
-                   <b> Password :</b> <input type="text" name="Password" value="Password" placeholder="Password" id="Password">
+        <h1 class="box" style="margin-bottom: 0.5rem;">Welcome Back, Dear User's!</h1>
+        <h4 style="color: white; background-color: rgb(9, 42, 228);">Please fill the details and get cracking.</h4>
+        <form id="login" method="get" action="login.php">
+            <div>
+                <label for="Uname">Username: </label>
+                <input class="input_field" type="text" name="Uname" id="Uname" placeholder="Username or Gmail or Phone">
+            </div>
+            <div>
+                <label for="Password"> Password:</label>
+                <input class="input_field" type="password" name="Password" placeholder="Password" id="Password">
+            </div>
+            <div>
+                <div></div>
+                <div>
                     <input type="checkbox" onclick="myFunction()">
                     <span class="words">Show Password</span>
-                </label>
-               
-
-                <br>
-                <br>
-                <input onclick="loginSystem()" class="center" type="button" name="log" id="log" value="Log In Here">
-                <br>
-                <br>
-                <input type="checkbox" id="Check">
-                <span class="green">Remember Me</span>
-                <br>
-                <br>
-                        <a href="#">Forgot Password</a>
-            </form>
-            <br><br>
-            <span class="words"><b>Don't have an account? <u><a href="../signup/signup.html">SignUp for Free</a></u></b>
-            
-           
-            <script src="login.js"></script>
-        </div>
+                </div>
+            </div>
+            <input onclick="loginSystem()" type="button" value="Log In Here">
+            <section>
+                <a href="#">Forgot Password</a>
+                <a href="../signup/signup.html">Don't have an account? SignUp for Free</a>
+            </section>
+        </form>
     </main>
+            <script src="login.js"></script>
 </body>
 </html>
