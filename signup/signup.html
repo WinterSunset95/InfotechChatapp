@@ -9,46 +9,41 @@
 </head>
 <body>
     <main>
-        <div style="padding-left: 2rem;">
-            <h3 class="signin">Welcome to Infotech Chatapp</h3>
-           <h6 class="signin">Join Us For Free</h6>
+        <h1 style="margin-bottom: 0.5rem;">Welcome to Infotech Chatapp</h1>
+       <h2 style="color: white; background-color: rgb(9, 42, 228);">Join Us For Free</h2>
+        <div>
+           <div>
+            <label for="username"><b>Username</b></label>
+            <input class="input_field" type="text" name="uname" id="uname" placeholder="UserName">
+           </div>
 
-            <br>
-           <span class="larger">Already Have An <a href="../login/login.html"> Account</a></span>
-            <hr color="aqua">
-            <hr color="aqua">
-             <label for="username"><b>Username</b></label>
-             <input type="text" name="uname" id="uname" placeholder="UserName">
-             <br>
-             <hr color="aqua">
+           <div>
+            <label for="Password"><b>Password</b></label>
+            <input class="input_field" type="text" name="pword" id="Password" placeholder="Password">
+           </div>
 
-             <label for="Password"><b>Password</b></label>
-             <input type="text" name="pword" id="Password" placeholder="Password">
-             <br><br>
+           <div>
+            <label for="ConfirmPassword"><b>ConfirmPassword</b></label>
+            <input class="input_field" type="text" name="cpword" id="ConfirmPassword" placeholder="ConfirmPassword">
+            </div>
 
-             <label for="ConfirmPassword"><b>ConfirmPassword</b></label>
-             <input type="text" name="cpword" id="ConfirmPassword" placeholder="ConfirmPassword">
-             <br><br>
+            <div>
+                <label for="gmail"><b>Gmail</b></label>
+                <input class="input_field" type="text" name="Gmail" id="Gmail" placeholder="Gmail">
+            </div>
 
-             <label for="gmail"><b>Gmail</b></label>
-             <input type="text" name="Gmail" id="Gmail" placeholder="Gmail">
-             <br>
-             <hr color="aqua">
+            <div>
+                <label for="phone_number"><b>Phone Number</b></label>
+                <input class="input_field" type="text" name="Pnumber" id="Pnumber" placeholder="PhoneNumber">
+            </div>
 
-             <label for="phone_number"><b>Phone Number</b></label>
-             <input type="text" name="Pnumber" id="Pnumber" placeholder="PhoneNumber">
-             <br>
-             <hr color="aqua">
-
-             <input onclick="signup()" type="button" name="Sign" id="Sign" value="Sign In Here">
-             <br>
-             <br>
-             <hr color="aqua">
-             <input type="checkbox" id="Check">
-             <span><b>Remember Me</b></span>
-             <br>
-             <br>
-
+            <div>
+                <input onclick="signup()" type="button" name="Sign" id="Sign" value="Sign In Here">
+            </div>
+            
+           <div>
+            <span>Already Have An <a href="../login/login.html"> Account</a>?</span>
+           </div>
         </div> 
     </main>
     <script src="signup.js"></script>

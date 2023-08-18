@@ -12,6 +12,9 @@ console.log("username", user)
 if (!user) {
 	alert("not logged in")
 	window.location.href = `${url}/login/login.html`
+} else {
+	document.getElementById("logged_in").style.display = "flex";
+	document.getElementById("logged_out").style.display = "none";
 }
 
 // We then get the display and inputs as javascript objects
@@ -25,6 +28,9 @@ let interval;
 const addToUl = (timestamp, message, sender) => {
 	const li = document.createElement('li')
 	li.innerHTML = `<p>${sender} -- ${timestamp}</p><p>${message}</p>`
+	if (sender == user) {
+		li.classList.add("message_right");
+	}
 	return li;
 }
 

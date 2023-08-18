@@ -2,14 +2,49 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../assets/chat_bg.jpg");
 }
 
 main {
     width: 100%;
-    max-width: 830px;
-    text-align: left justify;
-    line-height: 2rem;
 }
+
+textarea {
+    color: white;
+    width: 100%;
+    background-color: rgb(197, 25, 25);
+}
+
+.uploader {
+    border: 1px solid black;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.uploader > div {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.uploadBtn {
+    border: 1px solid gray;
+    border-radius: 1rem;
+    background: gray;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
 
 
 

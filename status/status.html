@@ -6,16 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StatusPage</title>
     <link rel="stylesheet" href="status.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src=
+    "https://kit.fontawesome.com/704ff50790.js"
+                crossorigin="anonymous">
+        </script>
 </head>
 <body>
     <main>
-        <h3>Upload Your Thoughts Here</h3>
-        <div>
-            <label>Upload <input type="file" id="myFile"></label>
-            <form>
-                <input type="button" value="Go Back!" onclick="history.back()">
-            </form>
+        <div class="uploader">
+            div
+            <textarea placeholder="What are your thoughts?"></textarea>
+            <label for="file" class="uploadBtn">Add File</label>
+            <input type="file" id="file" class="hidden">
+            <input type="submit" value="Upload">
+            <!-- <div  class="sm_list">
+                <input type="checkbox" id="share_button">
+                <label for="share_button">
+                    <span class="sharebtn">
+                        <i class="far fa-share-square"></i>
+                    </span>
+                </label>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-whatsapp"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>  -->
         </div>
+        <ul class="uploaded"></ul>
     </main>
+    <script src="status.js"></script>
 </body>
 </html>

@@ -10,13 +10,22 @@
 <body>
     <main>
         <div class="item1 item">
-            <button><a href="./login/login.html">Click Here To Login</a></button>
-            <button><a href="./signup/signup.html">Click Here To SignUp</a></button>
-            <button><a href="./login/login.html">Logout</a></button>
-            <button><a href="./status/status.html">Upload Status</a></button>
+            <div class="logo">Infotech</div>
+            <div class="user">
+                <div id="logged_in">
+                    <a href="./status/status.html">View Statuses</a>
+                    <a href="./login/login.html">Logout</a>
+                </div>
+                <div id="logged_out">
+                    <a href="./login/login.html">Login</a>
+                    <a href="./signup/signup.html">SignUp</a>
+                </div>
+            </div>
         </div>
 		<ul class="item2 item" id="messages"></ul>
         <div class="item3 item input_field">
+            <button onclick="emoji" class="butts">emoji</button>
+            <button onclick="image" class="butts">image</button>
             <input type="text" id="input" placeholder="Enter message">
             <button onclick="send()" class="butts">Send</button>
         </div>
@@ -24,3 +33,4 @@
     <script src="script.js"></script> 
 </body>
 </html>
+s
