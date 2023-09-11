@@ -7,18 +7,16 @@
     <title>StatusPage</title>
     <link rel="stylesheet" href="status.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src=
-    "https://kit.fontawesome.com/704ff50790.js"
-                crossorigin="anonymous">
-        </script>
+    <script src="https://kit.fontawesome.com/704ff50790.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
         <div class="uploader">
-            div
             <textarea placeholder="What are your thoughts?"></textarea>
-            <label for="file" class="uploadBtn">Add File</label>
-            <input type="file" id="file" class="hidden">
+			<div>
+				<label for="file" class="uploadBtn">Add File: </label>
+				<input type="file" id="file" name="file">
+			</div>
             <input type="submit" value="Upload">
             <!-- <div  class="sm_list">
                 <input type="checkbox" id="share_button">

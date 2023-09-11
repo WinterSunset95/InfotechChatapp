@@ -1,4 +1,3 @@
-let url = "/chatapp"
 const signup = () => {
     const name = document.getElementById('uname').value;
     const password = document.getElementById('Password').value;

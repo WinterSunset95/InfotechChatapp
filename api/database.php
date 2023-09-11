@@ -14,9 +14,9 @@ header("Access-Control-Allow-Headers: Content-Type");
 // }
 
 $dbhost = "localhost";
-$dbname = "infotechchatapp";
-$uname = "root";
-$upass = "";
+$dbname = "infotechchat";
+$uname = "Autumn";
+$upass = "win";
 
 $conn = new mysqli($dbhost, $uname, $upass, $dbname);
 

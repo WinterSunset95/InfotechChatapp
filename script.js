@@ -3,8 +3,6 @@
 // Licensed at Infotech, Bridge Street, Rengkai
 // Repository: https://github.com/WinterSunset95/InfotechChatapp
 
-const url = "/chatapp"
-
 // Firstly, we check if the user is logged in
 let user = localStorage.getItem("username");
 let password = localStorage.getItem("password");

@@ -11,9 +11,6 @@ function myFunction () {
     }
 }
 
-
-let url = "/chatapp"
-
 const loginSystem = () => {
     const name = document.getElementById("Uname").value;
     const password = document.getElementById("Password").value;
