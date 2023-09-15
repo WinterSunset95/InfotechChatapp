@@ -14,7 +14,7 @@ function myFunction () {
 const loginSystem = () => {
     const name = document.getElementById("Uname").value;
     const password = document.getElementById("Password").value;
-    fetch(`${url}/api/login.php`, {
+    fetch(`${url}api/login.php`, {
         method: "POST",
         body: JSON.stringify({ name, password }),
     })
@@ -24,7 +24,7 @@ const loginSystem = () => {
             localStorage.setItem("username", data.name);
             localStorage.setItem("password", password);
             alert(data.message);
-            window.location.href = "/chatapp/index.html";
+            window.location.href = `${url}index.html`;
         } else {
             alert(data.message);
         }

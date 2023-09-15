@@ -1,1 +1,1 @@
-const url = "/chatapp"
+const url = window.location.pathname;

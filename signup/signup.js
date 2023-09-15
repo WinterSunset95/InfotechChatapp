@@ -16,7 +16,7 @@ const signup = () => {
             phone: phone
         }
         console.log(user)
-        fetch(`${url}/api/signup.php`, {
+        fetch(`${url}api/signup.php`, {
             method: 'POST',
             body: JSON.stringify(user)
         })
@@ -24,7 +24,7 @@ const signup = () => {
         .then(data => {
             if (data.status == 'true') {
                 alert('Signup Successfull')
-                window.location.href = `${url}/login/login.html`
+                window.location.href = `${url}login/login.html`
             } else {
                 alert("Signup Failed");
             }

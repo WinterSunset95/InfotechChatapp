@@ -9,7 +9,7 @@ let password = localStorage.getItem("password");
 console.log("username", user)
 if (!user) {
 	alert("not logged in")
-	window.location.href = `${url}/login/login.html`
+	window.location.href = `${url}login/login.html`
 } else {
 	document.getElementById("logged_in").style.display = "flex";
 	document.getElementById("logged_out").style.display = "none";
@@ -40,7 +40,7 @@ const initialize = () => {
 	// It is a way to make a request to a server
 	// In this case, we are making a request to our own database
 	// This database contains a table of user messages
-	fetch(`${url}/api/index.php`)
+	fetch(`${url}api/index.php`)
 		.then(response => response.json())
 		.then(result => {
 			data = result.reverse();
@@ -71,7 +71,7 @@ initialize();
 const getData = () => {
 	user = localStorage.getItem("username");
 	password = localStorage.getItem("password");
-	fetch(`${url}/api/index.php`)
+	fetch(`${url}api/index.php`)
 	.then(response => response.json())
 	.then(result => {
 		// If the length of our data variable matches the length of the fetch result,
@@ -109,7 +109,7 @@ const send = () => {
 	const data = { "user": user, "message": value };
 	// Sending a POST request to our own database
 	// Along with the message the user typed in
-	fetch(`${url}/api/chat.php`, {
+	fetch(`${url}api/chat.php`, {
 		method: "POST",
 		body: JSON.stringify(data),
 		headers: {
